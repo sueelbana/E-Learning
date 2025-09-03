@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply text-textDark bg-background dark:text-neutral-100 dark:bg-neutral-900; }
-  a { @apply text-brand; }
+@font-face {
+  font-family: "Buenos Aires Trial";
+  src: url("./assets/fonts/BuenosAiresTrial-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Buenos Aires Trial";
+  src: url("./assets/fonts/BuenosAiresTrial-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+

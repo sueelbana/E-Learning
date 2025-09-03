@@ -1,48 +1,61 @@
-import { Link, NavLink } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { clsx } from 'clsx'
+import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { clsx } from "clsx";
+import logo from "../assets/logo.jpg";
 
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/courses', label: 'Courses' },
-  { to: '/calendar', label: 'Calendar' },
-  { to: '/blog', label: 'Blog' },
-  { to: '/membership', label: 'Membership' },
-  { to: '/literature', label: 'Library' },
-]
+  { to: "/", label: "Home" },
+  { to: "/courses", label: "Courses" },
+  { to: "/careers", label: "Careers" },
+  { to: "/blog", label: "Blog" },
+  { to: "/about", label: "About Us" },
+];
 
 export default function Navbar() {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem('theme')
-    const isDark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
-    setDark(isDark)
-  }, [])
+    const stored = localStorage.getItem("theme");
+    const isDark = stored
+      ? stored === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setDark(isDark);
+  }, []);
 
   useEffect(() => {
-    const root = document.documentElement
+    const root = document.documentElement;
     if (dark) {
-      root.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      root.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
-  }, [dark])
+  }, [dark]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 backdrop-blur">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="font-bold text-xl">E‑Learning</Link>
+    <header
+      className="sticky top-0 z-50"
+      style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        {/* Bigger Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="TOTC Logo" className="h-12 w-auto" />
+          {/* 👆 increased size */}
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-5">
-          {links.map(l => (
+        {/* Nav Links */}
+        <nav className="hidden md:flex items-center space-x-12">
+          {links.map((l) => (
             <NavLink
               key={l.to}
               to={l.to}
               className={({ isActive }) =>
-                clsx('text-sm hover:underline underline-offset-4', isActive && 'font-semibold text-brand')
+                clsx(
+                  "text-sm font-medium text-white hover:underline underline-offset-4",
+                  isActive 
+                )
               }
             >
               {l.label}
@@ -50,18 +63,22 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link to="/search" className="text-sm px-3 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700">Search</Link>
-          <Link to="/login" className="text-sm px-3 py-1.5 rounded-lg bg-brand text-white">Login</Link>
-          <button
-            onClick={() => setDark(v => !v)}
-            aria-label="Toggle dark mode"
-            className="text-sm px-3 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700"
+        {/* Smaller Buttons */}
+        <div className="flex items-center gap-2">
+          <Link
+            to="/login"
+            className="px-4 py-1.5 text-sm rounded-full border border-white text-white font-medium hover:bg-white hover:text-teal-600 transition"
           >
-            {dark ? 'Light' : 'Dark'}
-          </button>
+            Login
+          </Link>
+          <Link
+            to="/register"
+            className="px-4 py-1.5 text-sm rounded-full bg-white text-teal-600 font-medium hover:bg-neutral-100 transition"
+          >
+            Sign Up
+          </Link>
         </div>
       </div>
     </header>
-  )
+  );
 }
