@@ -7,6 +7,9 @@ import FeaturesSection from "../components/FeaturesSection";
 import ToolsSection from "../components/ToolsSection";
 import AssessmentSection from "../components/AssessmentSection";
 import Options from "../components/Options";
+import ExploreCoursesSection from "../components/ExploreCoursesSection";
+import TestimonialSection from "../components/TestimonialSection";
+import NewsSection from "../components/NewsSection";
 
 export default function Landing() {
   return (
@@ -20,6 +23,9 @@ export default function Landing() {
       <ToolsSection />
       <AssessmentSection />
       <Options />
+      <ExploreCoursesSection />
+      <TestimonialSection />
+      <NewsSection />
     </>
   );
 }
