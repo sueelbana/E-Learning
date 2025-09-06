@@ -1,33 +1,21 @@
-import { Routes, Route, Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 
-import Landing from "./pages/Landing.jsx";
-import Login from "./pages/Login.jsx";
-import Register from "./pages/Register.jsx";
-import Blog from "./pages/Blog.jsx";
-import BlogDetail from "./pages/BlogDetail.jsx";
-import Membership from "./pages/Membership.jsx";
-import Courses from "./pages/Courses.jsx";
-import CourseDetail from "./pages/CourseDetail.jsx";
-import Checkout from "./pages/Checkout.jsx";
-import CourseCalendar from "./pages/CourseCalendar.jsx";
-import Meeting from "./pages/Meeting.jsx";
-import Search from "./pages/Search.jsx";
-import Literature from "./pages/Literature.jsx";
-import NotFound from "./pages/NotFound.jsx";
-
-function Layout() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1">
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
-  );
-}
+import Landing from "./pages/Landing";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
+import Membership from "./pages/Membership";
+import Courses from "./pages/Courses";
+import CourseDetail from "./pages/CourseDetail";
+import Checkout from "./pages/Checkout";
+import CourseCalendar from "./pages/CourseCalendar";
+import Meeting from "./pages/Meeting";
+import Search from "./pages/Search";
+import Literature from "./pages/Literature";
+import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Pricing from "./pages/Pricing"; // 👈 Add your Pricing page
 
 export default function App() {
   return (
@@ -45,13 +33,14 @@ export default function App() {
         <Route path="/meeting" element={<Meeting />} />
         <Route path="/search" element={<Search />} />
         <Route path="/literature" element={<Literature />} />
+        <Route path="/pricing" element={<Pricing />} />{" "}
+        {/* 👈 New Pricing route */}
         <Route path="*" element={<NotFound />} />
       </Route>
 
-      {/* Standalone Login Page (no Navbar + Footer) */}
+      {/* Standalone Login & Register (no Navbar + Footer) */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-
     </Routes>
   );
 }
