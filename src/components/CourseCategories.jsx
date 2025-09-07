@@ -1,0 +1,76 @@
+import designIcon from "../assets/icons/design.jpg";
+import developmentIcon from "../assets/icons/development.jpg";
+import developmentIcon2 from "../assets/icons/development2.jpg";
+import businessIcon from "../assets/icons/business.jpg";
+import marketingIcon from "../assets/icons/marketing.jpg";
+import photographyIcon from "../assets/icons/photography.jpg";
+import actingIcon from "../assets/icons/acting2.jpg";
+import businessIcon2 from "../assets/icons/business2.jpg";
+
+
+const categories = [
+  {
+    title: "Design",
+    icon: designIcon,
+  },
+  {
+    title: "Development",
+    icon: developmentIcon,
+  },
+  {
+    title: "Development",
+    icon: developmentIcon2,
+  },
+  {
+    title: "Business",
+    icon: businessIcon,
+  },
+  {
+    title: "Marketing",
+    icon: marketingIcon,
+  },
+  {
+    title: "Photography",
+    icon: photographyIcon,
+  },
+  {
+    title: "Acting",
+    icon: actingIcon,
+  },
+  {
+    title: "Business",
+    icon: businessIcon2,
+  },
+];
+
+export default function CourseCategories() {
+  return (
+    <section className="py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-xl font-semibold text-center mb-10">
+          Choice favourite course from top category
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {categories.map((cat, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+            >
+              <div
+                className={`w-16 h-16 flex items-center justify-center rounded-xl ${cat.bg} mb-4`}
+              >
+                <img src={cat.icon} alt={cat.title} className="w-12 h-12" />
+              </div>
+              <h3 className="text-lg font-bold mb-2">{cat.title}</h3>
+              <p className="text-gray-500 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

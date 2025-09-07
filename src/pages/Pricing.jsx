@@ -1,5 +1,8 @@
 import { Check } from "lucide-react";
-import OnlineCoachingCTA from "../components/OnlineCoachingCTA"; // 👈 import your new component
+import OnlineCoachingCTA from "../components/OnlineCoachingCTA"; 
+import OnlineCoachingSection from "../components/OnlineCoachingSection";
+import StudentTestimonials from "../components/StudentTestimonials";
+import BecomeCard from "../components/BecomeCard";
 
 export default function Pricing() {
   const plans = [
@@ -130,8 +133,10 @@ export default function Pricing() {
           ))}
         </div>
       </section>
-
       <OnlineCoachingCTA />
+      <OnlineCoachingSection />
+      <StudentTestimonials />
+      <BecomeCard />
     </>
   );
 }
