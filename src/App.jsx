@@ -15,7 +15,7 @@ import Literature from "./pages/Literature";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Pricing from "./pages/Pricing"; // 👈 Add your Pricing page
+import Pricing from "./pages/Pricing"; 
 
 export default function App() {
   return (
