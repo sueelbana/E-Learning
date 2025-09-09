@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FaStar,
   FaFacebookF,
@@ -23,6 +24,8 @@ import EverythingSection from "../components/EverythingSection";
 import TopEducationOffers from "../components/TopEducationOffers";
 
 const CourseDetails = () => {
+  const navigate = useNavigate();
+
   // Reviews data
   const reviews = [
     {
@@ -40,6 +43,11 @@ const CourseDetails = () => {
       stars: 5,
     },
   ];
+
+  const handleBuyNow = () => {
+    // Redirect to checkout
+    navigate("/checkout");
+  };
 
   return (
     <section className="w-full">
@@ -62,13 +70,13 @@ const CourseDetails = () => {
               Overview
             </button>
             <button className="px-4 py-2 bg-gray-100 rounded-md">
-              Curriculum
+              Overview
             </button>
             <button className="px-4 py-2 bg-gray-100 rounded-md">
-              Instructor
+              Overview
             </button>
             <button className="px-4 py-2 bg-[rgba(73,187,189,1)] text-white rounded-md">
-              Reviews
+              Overview
             </button>
           </div>
 
@@ -150,7 +158,11 @@ const CourseDetails = () => {
             11 hours left at this price
           </p>
 
-          <button className="w-full bg-[rgba(73,187,189,1)] text-white py-2 rounded-lg mb-6">
+          {/* ✅ Updated Buy Now */}
+          <button
+            onClick={handleBuyNow}
+            className="w-full bg-[rgba(73,187,189,1)] text-white py-2 rounded-lg mb-6"
+          >
             Buy Now
           </button>
 
