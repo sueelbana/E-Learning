@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 
 import Landing from "./pages/Landing";
 import Blog from "./pages/Blog";
-import BlogDetail from "./pages/BlogDetail";
+import BlogDetails from "./pages/BlogDetails";
 import Membership from "./pages/Membership";
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
@@ -24,7 +24,7 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Landing />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:id" element={<CourseDetail />} />
