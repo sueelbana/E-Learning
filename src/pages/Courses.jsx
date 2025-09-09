@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom"; // ✅ use Link instead of navigate
 
 import course1 from "../assets/c1.jpg";
 import course2 from "../assets/c2.jpg";
@@ -58,9 +59,10 @@ export default function Courses() {
       {/* Courses Grid */}
       <div className="grid md:grid-cols-3 gap-6">
         {courses.map((course) => (
-          <div
+          <Link
             key={course.id}
-            className="rounded-lg shadow-md bg-white overflow-hidden"
+            to={`/schedual/${course.id}`} // ✅ use Link instead of navigate
+            className="rounded-lg shadow-md bg-white overflow-hidden hover:shadow-lg transition block"
           >
             <div className="flex justify-center items-center">
               <img
@@ -93,7 +95,7 @@ export default function Courses() {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
