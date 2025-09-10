@@ -15,7 +15,9 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Pricing from "./pages/Pricing";
-import SchedualPage from "./pages/SchedualPage"; // ✅ import your new page
+import SchedualPage from "./pages/SchedualPage"; // ✅ import SchedualPage
+import ChangePage from "./pages/ChangePage"; // ✅ import ChangePage
+import SuperCoinsPage from "./pages/SuperCoinsPage"; // ✅ new import
 
 export default function App() {
   return (
@@ -38,7 +40,9 @@ export default function App() {
       {/* Standalone Pages (no Navbar + Footer) */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/Schedual/:id" element={<SchedualPage />} /> {/* ✅ new */}
+      <Route path="/schedual/:id" element={<SchedualPage />} /> {/* ✅ new */}
+      <Route path="/change" element={<ChangePage />} /> {/* ✅ new */}
+      <Route path="/super-coins" element={<SuperCoinsPage />} /> {/* ✅ new */}
     </Routes>
   );
 }
