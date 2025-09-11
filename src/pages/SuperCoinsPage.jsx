@@ -16,7 +16,7 @@ export default function SuperCoinsPage() {
       <aside className="w-92 bg-white border-r p-4 overflow-y-auto">
         {/* Small Rectangle with Arrow */}
         <Link
-          to="/change" // ✅ goes back to ChangePage
+          to="/learn" // ✅ goes back to LearnPage
           className="w-10 h-10 flex items-center justify-center rounded-md mb-4"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
         >
