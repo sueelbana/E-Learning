@@ -8,7 +8,6 @@ import Membership from "./pages/Membership";
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/CourseDetail";
 import Checkout from "./pages/Checkout";
-import Meeting from "./pages/Meeting";
 import Search from "./pages/Search";
 import Literature from "./pages/Literature";
 import NotFound from "./pages/NotFound";
@@ -20,7 +19,8 @@ import Pricing from "./pages/Pricing";
 import SchedualPage from "./pages/SchedualPage";
 import ChangePage from "./pages/ChangePage";
 import SuperCoinsPage from "./pages/SuperCoinsPage";
-import LearnPage from "./pages/LearnPage"; // ✅ LearnPage import
+import LearnPage from "./pages/LearnPage";
+import LessonPage from "./pages/LessonPage"; // ✅ new lesson detail page
 
 export default function App() {
   return (
@@ -34,7 +34,6 @@ export default function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:id" element={<CourseDetail />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/meeting" element={<Meeting />} />
         <Route path="/search" element={<Search />} />
         <Route path="/literature" element={<Literature />} />
         <Route path="/pricing" element={<Pricing />} />
@@ -48,7 +47,10 @@ export default function App() {
       <Route path="/change" element={<ChangePage />} /> {/* ✅ ChangePage */}
       <Route path="/super-coins" element={<SuperCoinsPage />} />{" "}
       {/* ✅ SuperCoinsPage */}
-      <Route path="/learn" element={<LearnPage />} /> {/* ✅ LearnPage */}
+      <Route path="/learn" element={<LearnPage />} />{" "}
+      {/* ✅ Sidebar + lessons list */}
+      <Route path="/learn/lesson/:id" element={<LessonPage />} />{" "}
+      {/* ✅ individual lesson */}
     </Routes>
   );
 }

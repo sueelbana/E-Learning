@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react"; // ✅ Import Arrow
+import { ArrowLeft } from "lucide-react";
 import LessonDetail from "../components/LessonDetail";
 import TestimonialCard from "../components/TestimonialCard";
 import StudentsAlsoBought from "../components/StudentsAlsoBought";
@@ -11,7 +11,7 @@ export default function LearnPage() {
       <aside className="w-80 bg-white border-r p-4 overflow-y-auto">
         {/* Arrow Button */}
         <Link
-          to="/courses" // ✅ Replace with your actual back route
+          to="/courses"
           className="w-10 h-10 flex items-center justify-center rounded-md mb-4"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
         >
@@ -24,28 +24,28 @@ export default function LearnPage() {
         {/* Lessons */}
         <div className="space-y-2">
           <Link
-            to="/learn/lesson-1"
+            to="/learn/lesson/1"
             className="flex justify-between items-center px-3 py-1.5 rounded-md bg-green-100 text-sm"
           >
             <span>Lesson 01: Introduction</span>
             <span className="text-gray-600">25 mins</span>
           </Link>
           <Link
-            to="/learn/lesson-2"
+            to="/learn/lesson/2"
             className="flex justify-between items-center px-3 py-1.5 rounded-md bg-yellow-100 text-sm"
           >
             <span>Lesson 02: Basics of Design</span>
             <span className="text-gray-600">30 mins</span>
           </Link>
           <Link
-            to="/learn/lesson-3"
+            to="/learn/lesson/3"
             className="flex justify-between items-center px-3 py-1.5 rounded-md bg-blue-100 text-sm"
           >
             <span>Lesson 03: Components</span>
             <span className="text-gray-600">30 mins</span>
           </Link>
           <Link
-            to="/learn/lesson-4"
+            to="/learn/lesson/4"
             className="flex justify-between items-center px-3 py-1.5 rounded-md bg-pink-100 text-sm"
           >
             <span>Lesson 04: Animations</span>
