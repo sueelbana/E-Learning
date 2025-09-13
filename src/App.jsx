@@ -20,7 +20,8 @@ import SchedualPage from "./pages/SchedualPage";
 import ChangePage from "./pages/ChangePage";
 import SuperCoinsPage from "./pages/SuperCoinsPage";
 import LearnPage from "./pages/LearnPage";
-import LessonPage from "./pages/LessonPage"; // ✅ new lesson detail page
+import LessonPage from "./pages/LessonPage";
+import Careers from "./pages/Careers"; // ✅ Careers page
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/literature" element={<Literature />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/careers" element={<Careers />} /> {/* ✅ Careers route */}
         <Route path="*" element={<NotFound />} />
       </Route>
       {/* Standalone Pages (no Navbar + Footer) */}
