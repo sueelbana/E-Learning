@@ -1,5 +1,18 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Video, Mic, PhoneOff, Share, Settings } from "lucide-react";
+import {
+  ArrowLeft,
+  Video,
+  Mic,
+  PhoneOff,
+  Share,
+  Settings,
+  Clock,
+  BookOpen,
+  Book,
+  ChevronDown,
+  ChevronUp,
+  Lock,
+} from "lucide-react";
 
 // ✅ Import local images from assets
 import mainSpeaker from "../assets/mainSpeaker.jpg";
@@ -27,12 +40,12 @@ export default function LessonPage() {
             <ArrowLeft className="w-5 h-5 text-white" />
           </Link>
 
-          {/* Header Card */}
-          <div className="flex-1 bg-white rounded-md shadow px-6 py-3 flex items-center justify-between">
+          {/* Header Card (moved to right, taller) */}
+          <div className="bg-white rounded-md shadow px-6 py-6 flex items-center justify-between max-w-4xl w-full ml-auto">
             {/* Title + Subtitle */}
             <div>
-              <h2 className="text-base font-semibold">
-                UX/UI Design Confernce Meeting
+              <h2 className="text-lg font-semibold">
+                UX/UI Design Conference Meeting
               </h2>
               <p className="text-xs text-gray-500 mt-0.5">
                 9 Lesson &nbsp; 6h 30min
@@ -45,40 +58,55 @@ export default function LessonPage() {
         </div>
 
         {/* Video Container */}
-        <div className="bg-white rounded-lg shadow p-4 flex-1">
+        <div className="p-4 flex-1">
           <div className="relative bg-gray-200 rounded-lg overflow-hidden">
             <img
               src={mainSpeaker}
               alt="Main Speaker"
-              className="w-full h-[400px] object-cover"
+              className="w-full h-full object-cover"
             />
 
             {/* Participants */}
             <div className="absolute right-3 top-3 space-y-2">
               <img
                 src={participant1}
-                className="w-16 h-16 rounded-lg object-cover"
+                className="w-26 h-26 rounded-lg object-cover"
                 alt="Participant 1"
               />
               <img
                 src={participant2}
-                className="w-16 h-16 rounded-lg object-cover"
+                className="w-26 h-26 rounded-lg object-cover"
                 alt="Participant 2"
               />
               <img
                 src={participant3}
-                className="w-16 h-16 rounded-lg object-cover"
+                className="w-26 h-26 rounded-lg object-cover"
                 alt="Participant 3"
               />
             </div>
           </div>
 
-          {/* Controls */}
-          <div className="flex justify-center gap-6 mt-4 bg-blue-50 p-3 rounded-lg">
-            <Video className="w-6 h-6 text-gray-600" />
-            <Mic className="w-6 h-6 text-gray-600" />
-            <PhoneOff className="w-6 h-6 text-red-500" />
-            <Share className="w-6 h-6 text-gray-600" />
+          {/* Controls overlay (bottom aligned under speaker’s face) */}
+          <div className="absolute bottom-16 left-1/2 transform -translate-x-[79%] bg-blue-50 px-8 py-4 rounded-xl shadow-lg flex gap-6 w-[45%] justify-center">
+            {/* Video Button */}
+            <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
+              <Video className="w-6 h-6 text-red-600" />
+            </button>
+
+            {/* Mic Button */}
+            <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
+              <Mic className="w-6 h-6 text-gray-600" />
+            </button>
+
+            {/* PhoneOff Button */}
+            <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
+              <PhoneOff className="w-6 h-6 text-gray-500" />
+            </button>
+
+            {/* Share Button */}
+            <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
+              <Share className="w-6 h-6 text-gray-600" />
+            </button>
           </div>
         </div>
       </div>
@@ -88,47 +116,166 @@ export default function LessonPage() {
         {/* Course Contents */}
         <div className="bg-white rounded-lg shadow p-4">
           <h3 className="font-semibold mb-3">Course Contents</h3>
-          <ul className="space-y-2 text-sm">
-            <li className="flex justify-between items-center border-b pb-2">
-              <span>Get Started</span> <span>1 hr</span>
-            </li>
-            <li className="flex justify-between items-center border-b pb-2">
-              <span>Illustrator Structures</span> <span>3 lessons</span>
-            </li>
-            <li className="flex justify-between items-center border-b pb-2">
-              <span>Learn from basic</span> <span>25:00</span>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>Using Illustrator</span> <span>2 lessons</span>
-            </li>
-          </ul>
+
+          {/* Progress */}
+          <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span>2/5 COMPLETED</span>
+            <span className="text-teal-500">
+              <i className="fas fa-lock"></i>
+            </span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
+            <div
+              className="bg-teal-400 h-2 rounded-full"
+              style={{ width: "40%" }}
+            ></div>
+          </div>
+
+          {/* Course List */}
+          <div className="space-y-2 text-sm">
+            {/* Example Course */}
+            <div className="border rounded-lg p-3">
+              {/* Title + arrow */}
+              <div className="flex justify-between items-center">
+                <span className="font-medium">Get Started</span>
+                <ChevronDown className="w-4 h-4 text-gray-500" />
+              </div>
+
+              {/* Duration + lessons */}
+              <div className="flex items-center text-gray-500 mt-2 gap-28">
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-1" />
+                  <span>1 Hour</span>
+                </div>
+                <div className="flex items-center">
+                  <BookOpen className="w-4 h-4 mr-1" />
+                  <span>5 Lessons</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="border rounded-lg p-4 min-h-40 flex flex-col"
+              style={{ borderColor: "rgba(73, 187, 189, 1)" }}
+            >
+              {/* Title Row */}
+              <div className="flex justify-between items-center mb-2">
+                <span
+                  className="font-medium"
+                  style={{ color: "rgba(73, 187, 189, 1)" }}
+                >
+                  Illustrator Structures
+                </span>
+                <div className="flex items-center gap-2 text-gray-500">
+                  <ChevronUp className="w-4 h-4" />
+                  <BookOpen className="w-4 h-4" />
+                  <span>3 Lessons</span>
+                </div>
+              </div>
+
+              {/* Duration Row */}
+              <div className="flex items-center text-gray-600 text-xs mb-3">
+                <Clock className="w-4 h-4 mr-1" />
+                <span>2 Hour</span>
+              </div>
+
+              {/* Expanded Lessons */}
+              <ul className="space-y-3 text-sm text-gray-600 flex-1">
+                {/* Active Lesson */}
+                <li
+                  className="flex justify-between items-center font-medium"
+                  style={{ color: "rgba(73, 187, 189, 1)" }}
+                >
+                  <span>1. Lorem ipsum dolor sit amet</span>
+                  <span className="font-semibold">65:00</span>
+                </li>
+
+                {/* Locked Lessons */}
+                <li className="flex justify-between items-center">
+                  <span>2. Lorem ipsum dolor</span>
+                  <div className="flex items-center gap-2">
+                    <span>25:00</span>
+                    <Lock className="w-4 h-4 text-gray-500" />
+                  </div>
+                </li>
+                <li className="flex justify-between items-center">
+                  <span>3. Lorem ipsum dolor sit amet</span>
+                  <div className="flex items-center gap-2">
+                    <span>30:00</span>
+                    <Lock className="w-4 h-4 text-gray-500" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Other Courses */}
+            <div className="border rounded-lg p-3 flex flex-col">
+              <span className="font-medium">Using Illustrator</span>
+              <div className="flex items-center gap-4 text-gray-500 mt-2 text-sm">
+                <Clock className="w-4 h-4" />
+                <span>1 Hour</span>
+                <BookOpen className="w-4 h-4" />
+                <span>4 Lessons</span>
+              </div>
+            </div>
+
+            <div className="border rounded-lg p-3 flex flex-col">
+              <span className="font-medium">What is Pandas?</span>
+              <div className="flex items-center gap-4 text-gray-500 mt-2 text-sm">
+                <Clock className="w-4 h-4" />
+                <span>12:54</span>
+                <BookOpen className="w-4 h-4" />
+                <span>5 Lessons</span>
+              </div>
+            </div>
+
+            <div className="border rounded-lg p-3 flex flex-col">
+              <span className="font-medium">Work with Numpy</span>
+              <div className="flex items-center gap-4 text-gray-500 mt-2 text-sm">
+                <Clock className="w-4 h-4" />
+                <span>59:00</span>
+                <BookOpen className="w-4 h-4" />
+                <span>3 Lessons</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Book For You */}
         <div className="bg-white rounded-lg shadow p-4">
           <h3 className="font-semibold mb-3">Book for you</h3>
-          <div className="space-y-3">
-            <div className="flex items-center gap-3 border rounded-lg p-2">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="border rounded-lg p-2 flex flex-col items-center">
               <img
                 src={book1}
-                className="w-14 h-14 rounded-md object-cover"
+                className="w-20 h-20 rounded-md object-cover mb-2"
                 alt="Book 1"
               />
-              <div>
-                <p className="text-sm font-semibold">All Benefits of PLUS</p>
-                <span className="text-green-600 font-bold">$24</span>
-              </div>
+              <p className="text-xs font-semibold text-center">
+                All Benefits of PLUS
+              </p>
+              <span
+                style={{ color: "rgba(73, 187, 189, 1)" }}
+                className="font-bold"
+              >
+                $24
+              </span>
             </div>
-            <div className="flex items-center gap-3 border rounded-lg p-2">
+            <div className="border rounded-lg p-2 flex flex-col items-center">
               <img
                 src={book2}
-                className="w-14 h-14 rounded-md object-cover"
+                className="w-20 h-20 rounded-md object-cover mb-2"
                 alt="Book 2"
               />
-              <div>
-                <p className="text-sm font-semibold">All Benefits of PLUS</p>
-                <span className="text-green-600 font-bold">$24</span>
-              </div>
+              <p className="text-xs font-semibold text-center">
+                All Benefits of PLUS
+              </p>
+              <span
+                style={{ color: "rgba(73, 187, 189, 1)" }}
+                className="font-bold"
+              >
+                $24
+              </span>
             </div>
           </div>
         </div>
