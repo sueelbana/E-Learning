@@ -1,4 +1,4 @@
-import { Clock, Tag, ChevronLeft, ChevronRight } from "lucide-react";
+import { Clock, Grid, ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom"; // Import navigation hook
 
 import article1 from "../assets/article1.jpg";
@@ -78,7 +78,7 @@ export default function Recommended() {
               {/* Category + Duration */}
               <div className="flex items-center text-sm text-gray-500 gap-4 mb-2">
                 <span className="flex items-center gap-1">
-                  <Tag size={14} />
+                  <Grid size={14} />
                   Design
                 </span>
                 <span className="flex items-center gap-1">
