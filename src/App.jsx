@@ -22,6 +22,7 @@ import SuperCoinsPage from "./pages/SuperCoinsPage";
 import LearnPage from "./pages/LearnPage";
 import LessonPage from "./pages/LessonPage";
 import Careers from "./pages/Careers"; // ✅ Careers page
+import AboutUs from "./pages/AboutUs"; // ✅ AboutUs page
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/literature" element={<Literature />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/careers" element={<Careers />} /> {/* ✅ Careers route */}
+        <Route path="/about" element={<AboutUs />} /> {/* ✅ AboutUs route */}
         <Route path="*" element={<NotFound />} />
       </Route>
       {/* Standalone Pages (no Navbar + Footer) */}
