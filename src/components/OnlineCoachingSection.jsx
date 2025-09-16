@@ -31,12 +31,10 @@ export default function OnlineCoachingSection() {
   return (
     <section className="py-16 bg-white dark:bg-neutral-900 font-buenos">
       <div className="max-w-4xl mx-auto px-4">
-        {/* Heading */}
         <h2 className="text-center text-2xl md:text-2xl font-bold text-neutral-900 dark:text-white mb-10">
           Online coaching lessons for remote learning
         </h2>
 
-        {/* Accordion */}
         <div className="space-y-4">
           {lessons.map((lesson, idx) => (
             <div
@@ -63,7 +61,6 @@ export default function OnlineCoachingSection() {
                 )}
               </button>
 
-              {/* Content */}
               {openIndex === idx && (
                 <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-300">
                   {lesson.content}

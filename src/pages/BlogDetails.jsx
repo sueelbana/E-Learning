@@ -5,7 +5,6 @@ import RelatedBlog from "../components/RelatedBlog";
 export default function BlogDetails() {
   return (
     <section className="w-full">
-      {/* Full-width Hero Image */}
       <div className="w-full h-64 md:h-80 lg:h-[500px]">
         <img
           src={blogHero}
@@ -14,9 +13,7 @@ export default function BlogDetails() {
         />
       </div>
 
-      {/* Blog Content */}
       <div className="max-w-4xl mx-auto px-6 py-10">
-        {/* Title */}
         <h1
           className="text-2xl md:text-3xl font-bold mb-6 text-left"
           style={{ color: "rgba(47, 50, 125, 1)" }}
@@ -24,7 +21,6 @@ export default function BlogDetails() {
           Why Swift UI Should Be on the Radar of Every Mobile Developer
         </h1>
 
-        {/* Description / Body */}
         <div className="text-gray-700 leading-relaxed space-y-4 mb-8 text-left">
           <p>
             TOCT is a platform that allows educators to create online classes
@@ -52,7 +48,6 @@ export default function BlogDetails() {
           </p>
         </div>
 
-        {/* Tags */}
         <div className="flex gap-3 mb-8">
           <span className="px-3 py-1 bg-blue-50 text-sm rounded-full text-gray-500">
             affordable
@@ -68,10 +63,8 @@ export default function BlogDetails() {
           </span>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-gray-300 mb-8"></div>
 
-        {/* Author Card */}
         <div className="flex items-center justify-between p-4">
           <div className="flex items-center gap-3">
             <img
@@ -91,7 +84,6 @@ export default function BlogDetails() {
         </div>
       </div>
 
-      {/* Related Blog Section */}
       <RelatedBlog />
     </section>
   );

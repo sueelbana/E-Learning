@@ -39,13 +39,10 @@ export default function Navbar() {
       style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Bigger Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="TOTC Logo" className="h-12 w-auto" />
-          {/* 👆 increased size */}
         </Link>
 
-        {/* Nav Links */}
         <nav className="hidden md:flex items-center space-x-12">
           {links.map((l) => (
             <NavLink
@@ -54,7 +51,7 @@ export default function Navbar() {
               className={({ isActive }) =>
                 clsx(
                   "text-sm font-medium text-white hover:underline underline-offset-4",
-                  isActive 
+                  isActive
                 )
               }
             >
@@ -63,7 +60,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Smaller Buttons */}
         <div className="flex items-center gap-2">
           <Link
             to="/login"

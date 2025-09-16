@@ -12,18 +12,15 @@ import {
 export default function SuperCoinsPage() {
   return (
     <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar */}
       <aside className="w-92 bg-white border-r p-4 overflow-y-auto">
-        {/* Small Rectangle with Arrow */}
         <Link
-          to="/learn" // ✅ goes back to LearnPage
+          to="/learn" 
           className="w-10 h-10 flex items-center justify-center rounded-md mb-4"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
         >
           <ArrowLeft className="w-5 h-5 text-white" />
         </Link>
 
-        {/* Title */}
         <h3 className="text-base font-semibold mb-3">Change Simplification</h3>
 
         <div className="space-y-2">
@@ -67,9 +64,7 @@ export default function SuperCoinsPage() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1">
-        {/* Header Section */}
         <div
           className="px-8 py-6 text-white flex justify-between items-center"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
@@ -82,9 +77,7 @@ export default function SuperCoinsPage() {
           </div>
         </div>
 
-        {/* Content */}
         <div className="p-8 space-y-6">
-          {/* Share and Refer with Social Icons */}
           <div className="flex justify-between items-center">
             <h2 className="text-lg font-semibold">Share and Refer</h2>
             <div className="flex gap-3 text-teal-500 text-xl">
@@ -144,13 +137,11 @@ export default function SuperCoinsPage() {
             dolor sit amet, consectetur adipiscing
           </p>
 
-          {/* Example Cards */}
           {Array.from({ length: 3 }).map((_, i) => (
             <div
               key={i}
               className="bg-white rounded-lg shadow-md p-6 space-y-3"
             >
-              {/* Title and Icons aligned */}
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-semibold">
                   06 Super Coins on the way

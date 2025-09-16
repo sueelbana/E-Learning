@@ -8,7 +8,6 @@ export default function FeaturesSection() {
   return (
     <section className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        {/* Section Heading - Centered */}
         <div className="text-center max-w-xl mx-auto mb-16">
           <h2 className="text-3xl md:text-3xl font-bold text-gray-900 leading-snug">
             <span style={{ color: "rgba(47, 50, 125, 1)" }}>Our </span>
@@ -20,11 +19,8 @@ export default function FeaturesSection() {
           </p>
         </div>
 
-        {/* Two-column grid */}
         <div className="grid md:grid-cols-2 gap-4 items-start">
           {" "}
-          {/* ⬅️ reduced gap */}
-          {/* Left side - Image */}
           <div className="flex justify-center md:justify-start">
             <img
               src={Mockup}
@@ -32,7 +28,6 @@ export default function FeaturesSection() {
               className="w-full max-w-md"
             />
           </div>
-          {/* Right side - Text */}
           <div className="self-start">
             <h2 className="text-3xl md:text-3xl font-bold text-gray-900 leading-snug">
               <span style={{ color: "rgba(47, 50, 125, 1)" }}>A </span>
@@ -44,7 +39,6 @@ export default function FeaturesSection() {
               </span>
             </h2>
 
-            {/* Right side - Features list */}
             <div className="mt-8">
               <ul className="space-y-6">
                 <li className="flex items-start gap-3">

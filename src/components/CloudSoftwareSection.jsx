@@ -27,24 +27,21 @@ export default function CloudSoftwareSection() {
   return (
     <section className="py-16 bg-white dark:bg-neutral-900 font-buenos">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white">
-          All-In-One <span style={{ color: "rgba(0, 203, 184, 1)" }}>Cloud Software.</span>
-
+          All-In-One{" "}
+          <span style={{ color: "rgba(0, 203, 184, 1)" }}>Cloud Software.</span>
         </h2>
         <p className="mt-2 text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
           TOTC is one powerful online software suite that combines all the tools
           needed to run a successful school or office.
         </p>
 
-        {/* Feature Cards */}
         <div className="mt-12 flex flex-wrap justify-center gap-6">
           {features.map((f, i) => (
             <div
               key={i}
               className="w-64 p-4 bg-white dark:bg-neutral-800 rounded-xl shadow-md text-center"
             >
-              {/* Icon container */}
               <div className="mx-auto flex items-center justify-center mb-3">
                 <img
                   src={f.icon}

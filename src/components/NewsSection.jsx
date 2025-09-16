@@ -7,7 +7,6 @@ export default function NewsSection() {
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[rgba(47,50,125,1)]">
             Lastest News and Resources
@@ -17,9 +16,7 @@ export default function NewsSection() {
           </p>
         </div>
 
-        {/* Grid Layout */}
         <div className="grid md:grid-cols-2 gap-10">
-          {/* Left - Featured News */}
           <div className="space-y-4 max-w-lg mx-auto">
             <img
               src={NewsImg1}
@@ -45,9 +42,7 @@ export default function NewsSection() {
             </a>
           </div>
 
-          {/* Right - Other News */}
           <div className="space-y-6">
-            {/* News item */}
             <div className="flex gap-4">
               <img
                 src={NewsImg2}

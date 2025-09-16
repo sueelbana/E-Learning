@@ -6,12 +6,10 @@ export default function DefaultNavbar() {
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-md">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img src={Logo} alt="E-Learning Logo" className="h-12 w-auto" />
         </Link>
 
-        {/* Links */}
         <div className="hidden md:flex space-x-8">
           <NavLink
             to="/"
@@ -76,7 +74,6 @@ export default function DefaultNavbar() {
           </NavLink>
         </div>
 
-        {/* Right Side (Login / Register) */}
         <div className="flex items-center space-x-4">
           <Link
             to="/login"

@@ -6,25 +6,21 @@ export default function Register() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4 md:p-6">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Left: Image card */}
         <div className="relative rounded-3xl overflow-hidden shadow-xl bg-neutral-200 h-full min-h-screen">
           <img
             src={studentsImg}
             alt="Students in a classroom"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          {/* subtle vignette */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
         </div>
 
-        {/* Right: Form card */}
         <div className="p-6 sm:p-8 md:p-10 flex items-center">
           <div className="w-full max-w-md mx-auto">
             <p className="text-center text-sm text-neutral-500 dark:text-neutral-400 mb-3">
               Welcome to lorem..!
             </p>
 
-            {/* Segmented control */}
             <div className="flex items-center justify-center mb-5">
               <div className="inline-flex rounded-full p-1 bg-neutral-100 dark:bg-neutral-800">
                 <Link
@@ -55,7 +51,6 @@ export default function Register() {
               industry.
             </p>
 
-            {/* Register form */}
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium">

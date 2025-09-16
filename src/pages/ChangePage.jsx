@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { Link } from "react-router-dom"; // ✅ using Link
+import { Link } from "react-router-dom"; 
 
 export default function ChangePage() {
   const [date, setDate] = useState(new Date());
@@ -28,24 +28,20 @@ export default function ChangePage() {
     },
   ];
 
-  // Format selected date to match events
   const selectedDate = date.toISOString().split("T")[0];
   const todaysEvents = events.filter((e) => e.date === selectedDate);
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar */}
       <aside className="w-92 bg-white border-r p-4 overflow-y-auto">
-        {/* Small Rectangle with Arrow */}
         <Link
-          to="/super-coins" // ✅ replace with your actual route
+          to="/super-coins" 
           className="w-10 h-10 flex items-center justify-center rounded-md mb-4"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
         >
           <ArrowLeft className="w-5 h-5 text-white" />
         </Link>
 
-        {/* Title */}
         <h3 className="text-base font-semibold mb-3">Change Simplification</h3>
 
         <div className="space-y-2">
@@ -89,9 +85,7 @@ export default function ChangePage() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1">
-        {/* Header Section */}
         <div
           className="px-8 py-6 text-white flex justify-between items-center"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
@@ -105,7 +99,6 @@ export default function ChangePage() {
           <span className="text-sm opacity-90">1 hour</span>
         </div>
 
-        {/* Description */}
         <div className="p-8">
           <h2 className="text-lg font-semibold mb-2">Share and refer</h2>
           <p className="text-gray-600 leading-relaxed">
@@ -115,10 +108,8 @@ export default function ChangePage() {
             aliquip ex ea commodo consequat.
           </p>
 
-          {/* Calendar */}
           <div className="mt-6 bg-white rounded-lg shadow-md p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Calendar Picker */}
               <div>
                 <h3 className="font-semibold mb-3">Select a Date</h3>
                 <Calendar
@@ -128,7 +119,6 @@ export default function ChangePage() {
                 />
               </div>
 
-              {/* Selected Day & Events */}
               <div>
                 <h3 className="font-semibold mb-3">{date.toDateString()}</h3>
                 <div className="space-y-3 max-h-64 overflow-y-auto">

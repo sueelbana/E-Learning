@@ -13,12 +13,10 @@ export default function Careers() {
 
   return (
     <div className="w-full flex flex-col items-center">
-      {/* 🔹 Background Section */}
       <div
         className="w-full flex flex-col items-center bg-center bg-cover py-16"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-        {/* Search Box */}
         <div className="flex w-3/4 max-w-4xl rounded-lg overflow-hidden shadow-md bg-white">
           <input
             type="text"
@@ -35,7 +33,6 @@ export default function Careers() {
           </button>
         </div>
 
-        {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3 mt-6">
           {[
             "Subject",

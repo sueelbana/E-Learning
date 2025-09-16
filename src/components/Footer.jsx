@@ -7,7 +7,6 @@ const Footer = () => {
   return (
     <footer className="bg-[rgba(37,38,65,1)] text-gray-300 py-12">
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center space-y-6">
-        {/* Logo + Title side by side */}
         <div className="flex items-center space-x-4">
           <img src={Logo} alt="TOTC Logo" className="h-10" />
           <div className="border-l border-gray-500 h-6"></div>
@@ -16,7 +15,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Newsletter */}
         <div className="text-center">
           <p className="mb-3 text-gray-200 font-medium">
             Subscribe to get our Newsletter
@@ -35,7 +33,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Links */}
         <div className="flex space-x-6 text-sm divide-x divide-gray-500">
           <a href="#" className="hover:text-white pr-6">
             Careers
@@ -48,7 +45,6 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Copyright */}
         <p className="text-xs text-gray-500">© 2024 Class Technologies Inc.</p>
       </div>
     </footer>

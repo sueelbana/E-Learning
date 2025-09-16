@@ -19,7 +19,7 @@ export default function Pricing() {
       ],
       buttonStyle: "hover:bg-sky-50",
       buttonTextColor: "rgba(73, 187, 189, 1)",
-      checkBg: "bg-gray-400", // gray background
+      checkBg: "bg-gray-400", 
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ export default function Pricing() {
       buttonStyle: "hover:opacity-90",
       buttonBgColor: "rgba(73, 187, 189, 1)",
       buttonTextColor: "#fff",
-      checkBg: "bg-yellow-400", // yellow background
+      checkBg: "bg-yellow-400", 
     },
     {
       id: 3,
@@ -54,14 +54,13 @@ export default function Pricing() {
       ],
       buttonStyle: "hover:bg-sky-50",
       buttonTextColor: "rgba(73, 187, 189, 1)",
-      checkBg: "bg-green-300", // lighter green background
+      checkBg: "bg-green-300", 
     },
   ];
 
   return (
     <>
       <section className="w-full py-16 px-6 bg-white">
-        {/* Title */}
         <h2
           className="text-2xl md:text-3xl font-bold text-center mb-12"
           style={{ color: "rgba(73, 187, 189, 1)" }}
@@ -69,7 +68,6 @@ export default function Pricing() {
           Affordable pricing
         </h2>
 
-        {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center max-w-4xl mx-auto items-stretch">
           {plans.map((plan) => (
             <div
@@ -78,7 +76,6 @@ export default function Pricing() {
                 plan.best ? "scale-105 border border-gray-200" : "border-0"
               } max-w-xs mx-auto h-full`}
             >
-              {/* Badge */}
               {plan.best && (
                 <span
                   className="absolute top-4 right-4 bg-white border text-black text-xs font-semibold px-3 py-1 rounded-full"
@@ -88,7 +85,6 @@ export default function Pricing() {
                 </span>
               )}
 
-              {/* Title */}
               <h3
                 className="text-lg font-semibold mb-3"
                 style={{ color: "rgba(73, 187, 189, 1)" }}
@@ -96,7 +92,6 @@ export default function Pricing() {
                 {plan.title}
               </h3>
 
-              {/* Price */}
               <div className="text-2xl font-bold mb-5">
                 {plan.price}
                 <span className="text-gray-500 text-sm font-medium">
@@ -104,11 +99,9 @@ export default function Pricing() {
                 </span>
               </div>
 
-              {/* Features */}
               <ul className="space-y-2 mb-5 flex-1">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2 text-sm">
-                    {/* Custom Check Circle */}
                     <div
                       className={`w-5 h-5 flex items-center justify-center rounded-full ${plan.checkBg}`}
                     >
@@ -119,7 +112,6 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              {/* Button */}
               <button
                 className={`w-full py-2 px-4 rounded-lg font-medium transition ${plan.buttonStyle}`}
                 style={{

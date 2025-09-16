@@ -8,7 +8,6 @@ import img7 from "../assets/7.jpg";
 import img8 from "../assets/8.jpg";
 import avatar from "../assets/profile.jpg";
 
-// ✅ Import icons
 import { Grid, Clock } from "lucide-react";
 
 const courses = [
@@ -103,7 +102,6 @@ export default function CoursesGrid() {
             key={course.id}
             className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col"
           >
-            {/* Course Image */}
             <img
               src={course.image}
               alt={course.title}
@@ -111,7 +109,6 @@ export default function CoursesGrid() {
             />
 
             <div className="p-4 flex flex-col flex-grow">
-              {/* Meta Info with Icons */}
               <div className="flex justify-between text-gray-400 text-sm mb-2">
                 <div className="flex items-center gap-1">
                   <Grid size={14} className="text-gray-400" />
@@ -123,7 +120,6 @@ export default function CoursesGrid() {
                 </div>
               </div>
 
-              {/* Title + Description */}
               <h3 className="text-lg font-semibold text-gray-800">
                 {course.title}
               </h3>
@@ -132,7 +128,6 @@ export default function CoursesGrid() {
                 eiusmod tempor
               </p>
 
-              {/* Instructor + Price */}
               <div className="flex items-center justify-between mt-4">
                 <div className="flex items-center gap-2">
                   <img

@@ -31,7 +31,6 @@ const TopEducationOffers = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-10">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-semibold">
           Top Education offers and deals are listed here
@@ -44,31 +43,25 @@ const TopEducationOffers = () => {
         </a>
       </div>
 
-      {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {offers.map((offer) => (
           <div
             key={offer.id}
             className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
           >
-            {/* Background Image */}
             <img
               src={offer.image}
               alt={offer.title}
               className="w-full h-72 object-cover"
             />
 
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start p-6">
-              {/* Discount Badge */}
               <span className="absolute top-6 left-6 bg-red-500 text-white text-lg font-bold px-3 py-1 rounded">
                 {offer.discount}
               </span>
 
-              {/* Title */}
               <h3 className="text-white text-xl mb-2">{offer.title}</h3>
 
-              {/* Description */}
               <p className="text-white text-md max-w-xs">{offer.description}</p>
             </div>
           </div>

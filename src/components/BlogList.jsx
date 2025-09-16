@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"; // ✅ Only if you're using React Router
+import { Link } from "react-router-dom"; 
 import uxImage from "../assets/ux.jpg";
 import reactImage from "../assets/react.jpg";
 import phpImage from "../assets/php.jpg";
@@ -35,19 +35,16 @@ export default function BlogList() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Title */}
         <h2 className="text-xl font-bold text-gray-900 mb-8">
           Reading blog list
         </h2>
 
-        {/* Blog Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {blogs.map((blog) => (
             <div
               key={blog.id}
               className="relative rounded-xl overflow-hidden shadow-md group"
             >
-              {/* Wrap Image with Link */}
               <Link to={blog.link}>
                 <img
                   src={blog.image}

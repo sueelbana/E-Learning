@@ -14,25 +14,21 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4 md:p-6">
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Left: Image card */}
         <div className="relative rounded-3xl overflow-hidden shadow-xl bg-neutral-200 h-full min-h-screen">
           <img
             src={loginImg}
             alt="Students in a classroom"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          {/* subtle vignette */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
         </div>
 
-        {/* Right: Form card */}
         <div className="p-6 sm:p-8 md:p-10 flex items-center">
           <div className="w-full max-w-md mx-auto">
             <p className="text-center text-sm text-neutral-500 dark:text-neutral-400 mb-3">
               Welcome to lorem..!
             </p>
 
-            {/* Segmented control */}
             <div className="flex items-center justify-center mb-5">
               <div className="inline-flex rounded-full p-1 bg-neutral-100 dark:bg-neutral-800">
                 <Link
@@ -64,7 +60,6 @@ export default function Login() {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Username */}
               <label className="block">
                 <span className="block text-sm text-neutral-700 dark:text-neutral-200 mb-1">
                   User name
@@ -78,7 +73,6 @@ export default function Login() {
                 />
               </label>
 
-              {/* Password */}
               <label className="block">
                 <span className="block text-sm text-neutral-700 dark:text-neutral-200 mb-1">
                   Password
@@ -98,7 +92,6 @@ export default function Login() {
                     onClick={() => setShowPassword((v) => !v)}
                     className="absolute inset-y-0 right-2 my-auto h-8 w-8 grid place-items-center rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800"
                   >
-                    {/* Eye icon */}
                     {showPassword ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +128,6 @@ export default function Login() {
                 </div>
               </label>
 
-              {/* Remember / Forgot */}
               <div className="flex items-center justify-between text-sm">
                 <label className="inline-flex items-center gap-2 select-none text-neutral-700 dark:text-neutral-300">
                   <input
@@ -152,7 +144,6 @@ export default function Login() {
                 </Link>
               </div>
 
-              {/* Submit */}
               <div className="flex justify-end">
                 <button
                   type="submit"

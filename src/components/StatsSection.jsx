@@ -10,7 +10,6 @@ export default function StatsSection() {
   return (
     <section className="py-16 bg-white dark:bg-neutral-800 font-buenos">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white">
           Our Success
         </h2>
@@ -20,14 +19,13 @@ export default function StatsSection() {
           ultrices eu ornare tristique vel nisl orci.
         </p>
 
-        {/* Stats */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-8">
           {stats.map((s, i) => (
             <div key={i}>
               <h3 className="text-3xl md:text-4xl font-buenos text-sky-600">
                 {s.number}
               </h3>
-              <p className="mt-1 text-neutral-600 font-buenos font-semibold text-black">
+              <p className="mt-1 font-buenos font-semibold text-black">
                 {s.label}
               </p>
             </div>

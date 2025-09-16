@@ -4,17 +4,14 @@ import { Link } from "react-router-dom";
 export default function SchedualPage() {
   return (
     <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar */}
       <aside className="w-72 bg-white border-r p-4 overflow-y-auto">
-        {/* Back Button */}
         <Link
-          to="/change" // 👈 replace with your Change page route
+          to="/change" 
           className="inline-flex items-center mb-4 p-2 rounded-md bg-[rgba(73,187,189,1)] text-white hover:opacity-90 transition"
         >
           <ArrowLeft size={18} />
         </Link>
 
-        {/* Change Simplification Section */}
         <h3 className="text-base font-semibold mb-3">Change Simplification</h3>
         <div className="space-y-2">
           {[
@@ -54,7 +51,6 @@ export default function SchedualPage() {
           ))}
         </div>
 
-        {/* Practice Quiz Section */}
         <h3 className="text-base font-semibold mt-8 mb-3">PRACTICE QUIZ</h3>
         <div className="space-y-2">
           {Array.from({ length: 12 }, (_, i) => {
@@ -83,9 +79,7 @@ export default function SchedualPage() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1">
-        {/* Header Section */}
         <div
           className="px-8 py-6 text-white"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
@@ -96,7 +90,6 @@ export default function SchedualPage() {
           <p className="text-sm opacity-90">Introduction about XD</p>
         </div>
 
-        {/* Form Section */}
         <div className="p-8 bg-blue-50">
           <div className="p-6">
             <h2 className="text-lg font-semibold mb-2">Create new event</h2>
@@ -109,11 +102,8 @@ export default function SchedualPage() {
           </div>
         </div>
 
-        {/* Form Container */}
         <div className="bg-white rounded-lg shadow-md p-6 mt-6">
-          {/* Form */}
           <form className="space-y-4">
-            {/* Event Name */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Event Name
@@ -125,7 +115,6 @@ export default function SchedualPage() {
               />
             </div>
 
-            {/* Start Date / Time */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Start date / Time
@@ -142,7 +131,6 @@ export default function SchedualPage() {
               </div>
             </div>
 
-            {/* Location */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Location
@@ -154,9 +142,7 @@ export default function SchedualPage() {
               />
             </div>
 
-            {/* Notification & Email side by side */}
             <div className="grid grid-cols-2 gap-4">
-              {/* Notification */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Notification
@@ -167,7 +153,6 @@ export default function SchedualPage() {
                 </select>
               </div>
 
-              {/* Email */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Email
@@ -180,7 +165,6 @@ export default function SchedualPage() {
               </div>
             </div>
 
-            {/* Event Description */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Event Description
@@ -191,7 +175,6 @@ export default function SchedualPage() {
               />
             </div>
 
-            {/* Button aligned right */}
             <div className="flex justify-end">
               <button
                 type="submit"

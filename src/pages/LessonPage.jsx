@@ -14,7 +14,6 @@ import {
   Lock,
 } from "lucide-react";
 
-// ✅ Import local images from assets
 import mainSpeaker from "../assets/mainSpeaker.jpg";
 import participant1 from "../assets/p1.jpg";
 import participant2 from "../assets/p2.jpg";
@@ -27,11 +26,8 @@ export default function LessonPage() {
 
   return (
     <div className="relative flex min-h-screen bg-blue-50 p-4 gap-4">
-      {/* Left Section */}
       <div className="flex-1 flex flex-col gap-4">
-        {/* ✅ Header Row */}
         <div className="flex items-center gap-3">
-          {/* Back Button */}
           <Link
             to="/learn"
             className="w-10 h-10 flex items-center justify-center rounded-md shadow-lg"
@@ -40,9 +36,7 @@ export default function LessonPage() {
             <ArrowLeft className="w-5 h-5 text-white" />
           </Link>
 
-          {/* Header Card (moved to right, taller) */}
           <div className="bg-white rounded-md shadow px-6 py-6 flex items-center justify-between max-w-4xl w-full ml-auto">
-            {/* Title + Subtitle */}
             <div>
               <h2 className="text-lg font-semibold">
                 UX/UI Design Conference Meeting
@@ -52,12 +46,10 @@ export default function LessonPage() {
               </p>
             </div>
 
-            {/* Settings Icon */}
             <Settings className="w-5 h-5 text-gray-500" />
           </div>
         </div>
 
-        {/* Video Container */}
         <div className="p-4 flex-1">
           <div className="relative bg-gray-200 rounded-lg overflow-hidden">
             <img
@@ -66,7 +58,6 @@ export default function LessonPage() {
               className="w-full h-full object-cover"
             />
 
-            {/* Participants */}
             <div className="absolute right-3 top-3 space-y-2">
               <img
                 src={participant1}
@@ -86,24 +77,19 @@ export default function LessonPage() {
             </div>
           </div>
 
-          {/* Controls overlay (bottom aligned under speaker’s face) */}
           <div className="absolute bottom-16 left-1/2 transform -translate-x-[79%] bg-blue-50 px-8 py-4 rounded-xl shadow-lg flex gap-6 w-[45%] justify-center">
-            {/* Video Button */}
             <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
               <Video className="w-6 h-6 text-red-600" />
             </button>
 
-            {/* Mic Button */}
             <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
               <Mic className="w-6 h-6 text-gray-600" />
             </button>
 
-            {/* PhoneOff Button */}
             <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
               <PhoneOff className="w-6 h-6 text-gray-500" />
             </button>
 
-            {/* Share Button */}
             <button className="bg-white w-12 h-12 rounded-lg flex items-center justify-center shadow">
               <Share className="w-6 h-6 text-gray-600" />
             </button>
@@ -111,13 +97,10 @@ export default function LessonPage() {
         </div>
       </div>
 
-      {/* Sidebar */}
       <div className="w-80 space-y-6">
-        {/* Course Contents */}
         <div className="bg-white rounded-lg shadow p-4">
           <h3 className="font-semibold mb-3">Course Contents</h3>
 
-          {/* Progress */}
           <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
             <span>2/5 COMPLETED</span>
             <span className="text-teal-500">
@@ -131,17 +114,13 @@ export default function LessonPage() {
             ></div>
           </div>
 
-          {/* Course List */}
           <div className="space-y-2 text-sm">
-            {/* Example Course */}
             <div className="border rounded-lg p-3">
-              {/* Title + arrow */}
               <div className="flex justify-between items-center">
                 <span className="font-medium">Get Started</span>
                 <ChevronDown className="w-4 h-4 text-gray-500" />
               </div>
 
-              {/* Duration + lessons */}
               <div className="flex items-center text-gray-500 mt-2 gap-28">
                 <div className="flex items-center">
                   <Clock className="w-4 h-4 mr-1" />
@@ -158,7 +137,6 @@ export default function LessonPage() {
               className="border rounded-lg p-4 min-h-40 flex flex-col"
               style={{ borderColor: "rgba(73, 187, 189, 1)" }}
             >
-              {/* Title Row */}
               <div className="flex justify-between items-center mb-2">
                 <span
                   className="font-medium"
@@ -173,15 +151,12 @@ export default function LessonPage() {
                 </div>
               </div>
 
-              {/* Duration Row */}
               <div className="flex items-center text-gray-600 text-xs mb-3">
                 <Clock className="w-4 h-4 mr-1" />
                 <span>2 Hour</span>
               </div>
 
-              {/* Expanded Lessons */}
               <ul className="space-y-3 text-sm text-gray-600 flex-1">
-                {/* Active Lesson */}
                 <li
                   className="flex justify-between items-center font-medium"
                   style={{ color: "rgba(73, 187, 189, 1)" }}
@@ -190,7 +165,6 @@ export default function LessonPage() {
                   <span className="font-semibold">65:00</span>
                 </li>
 
-                {/* Locked Lessons */}
                 <li className="flex justify-between items-center">
                   <span>2. Lorem ipsum dolor</span>
                   <div className="flex items-center gap-2">
@@ -208,7 +182,6 @@ export default function LessonPage() {
               </ul>
             </div>
 
-            {/* Other Courses */}
             <div className="border rounded-lg p-3 flex flex-col">
               <span className="font-medium">Using Illustrator</span>
               <div className="flex items-center gap-4 text-gray-500 mt-2 text-sm">
@@ -241,7 +214,6 @@ export default function LessonPage() {
           </div>
         </div>
 
-        {/* Book For You */}
         <div className="bg-white rounded-lg shadow p-4">
           <h3 className="font-semibold mb-3">Book for you</h3>
           <div className="grid grid-cols-2 gap-3">

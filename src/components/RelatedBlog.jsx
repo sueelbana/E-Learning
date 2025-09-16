@@ -30,7 +30,6 @@ export default function RelatedBlog() {
   return (
     <section className="py-20 bg-[rgba(240,248,255,1)]">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
         <div className="flex justify-between items-center mb-10">
           <h2 className="text-xl font-semibold text-gray-900">Related Blog</h2>
           <a
@@ -41,14 +40,12 @@ export default function RelatedBlog() {
           </a>
         </div>
 
-        {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {blogs.map((blog) => (
             <div
               key={blog.id}
               className="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
             >
-              {/* Image */}
               <div className="w-full h-56 flex items-center justify-center bg-white overflow-hidden">
                 <img
                   src={blog.image}
@@ -57,13 +54,11 @@ export default function RelatedBlog() {
                 />
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {blog.title}
                 </h3>
 
-                {/* Author */}
                 <div className="flex items-center gap-3 mb-3">
                   <img
                     src={authorImage}
@@ -75,10 +70,8 @@ export default function RelatedBlog() {
                   </p>
                 </div>
 
-                {/* Description */}
                 <p className="text-sm text-gray-600 mb-4">{blog.description}</p>
 
-                {/* Footer */}
                 <div className="flex justify-between items-center text-sm">
                   <a
                     href={`/blog/${blog.id}`}
@@ -97,7 +90,6 @@ export default function RelatedBlog() {
           ))}
         </div>
 
-        {/* Navigation Buttons */}
         <div className="flex justify-end gap-3 mt-10">
           <button className="w-7 h-7 flex items-center justify-center rounded-sm bg-white shadow hover:bg-gray-100 transition">
             ←

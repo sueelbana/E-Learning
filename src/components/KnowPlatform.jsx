@@ -5,7 +5,6 @@ export default function KnowPlatform() {
   return (
     <section className="bg-blue-50 py-12 px-6 md:px-16 rounded-2xl max-w-6xl mx-auto">
       <div className="grid md:grid-cols-2 items-center gap-10">
-        {/* Left Content */}
         <div className="space-y-5">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 leading-snug">
             Know about learning <br /> learning platform
@@ -31,7 +30,6 @@ export default function KnowPlatform() {
           </button>
         </div>
 
-        {/* Single Group Image */}
         <div className="w-full">
           <img
             src={ParticipantsImg}

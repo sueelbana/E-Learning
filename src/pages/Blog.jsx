@@ -7,7 +7,6 @@ import MarketingArticles from "../components/MarketingArticles";
 export default function Blog() {
   return (
     <div className="bg-white dark:bg-gray-900 min-h-screen">
-      {/* Blog Featured Section */}
       <BlogFeatured />
       <BlogList />
       <RelatedBlog />

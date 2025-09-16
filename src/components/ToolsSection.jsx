@@ -4,7 +4,6 @@ export default function ToolsSection() {
   return (
     <section className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
       <div className="container mx-auto px-6 grid md:grid-cols-2 items-center gap-8">
-        {/* Left Side - Text with Line */}
         <div className="relative pl-6">
           <h2 className="text-3xl md:text-4xl font-bold leading-snug">
             <span className="text-[rgba(73,187,189,1)]">Tools </span>
@@ -19,7 +18,6 @@ export default function ToolsSection() {
           </p>
         </div>
 
-        {/* Right Side - Image with floating icons */}
         <div className="relative flex justify-center">
           <img
             src={StudentImg}

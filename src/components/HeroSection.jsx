@@ -4,7 +4,6 @@ import { Play, Calendar, Mail } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="relative bg-[rgba(73,187,189,1)] py-12 md:py-16 overflow-hidden">
-      {/* Curve at the bottom */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
         <svg
           className="relative block w-full h-24 md:h-40"
@@ -16,9 +15,7 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      {/* Main content */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 relative z-10 -mt-16">
-        {/* Left: Text content */}
         <div className="flex-1 text-center md:text-left text-white">
           <h1 className="text-2xl md:text-5xl font-bold leading-tight mb-6">
             <span className="text-yellow-500">Studying</span> Online is now much
@@ -54,7 +51,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right: Illustration / Image with floating boxes */}
         <div className="flex-1 flex justify-center md:justify-end h-full items-start relative">
           <img
             src={heroImg}
@@ -62,7 +58,6 @@ export default function HeroSection() {
             className="h-full object-contain -mt-6 relative z-0"
           />
 
-          {/* Box 1 - Top Left */}
           <div className="absolute top-40 left-4 bg-gray-200/80 p-4 rounded-xl shadow-md flex items-center gap-3 backdrop-blur-sm">
             <div className="w-10 h-10 flex items-center justify-center bg-white/70 rounded-lg">
               <Calendar className="text-blue-600" size={20} />
@@ -72,7 +67,6 @@ export default function HeroSection() {
               <p className="text-gray-700 text-sm">Assisted Student</p>
             </div>
           </div>
-          {/* Box 2 - Middle Right (slightly down) */}
           <div className="absolute top-80 right-4 bg-gray-200/80 p-4 rounded-xl shadow-md flex items-center gap-3 backdrop-blur-sm">
             <div className="w-10 h-10 flex items-center justify-center bg-white/70 rounded-lg">
               <Mail className="text-orange-500" size={20} />
@@ -83,7 +77,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Box 3 - User Experience Class (extra down) */}
           <div className="absolute top-96 left-0 bg-gray-200/80 p-4 rounded-xl shadow-md flex items-center gap-3 backdrop-blur-sm">
             <img
               src="https://randomuser.me/api/portraits/men/32.jpg"

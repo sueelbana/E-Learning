@@ -5,7 +5,6 @@ export default function WhatIsTotcSection() {
   return (
     <section className="py-16 bg-white font-buenos">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        {/* Heading */}
         <h2 className="text-2xl md:text-3xl">
           <span style={{ color: "rgba(47, 50, 125, 1)" }}>What is </span>
           <span style={{ color: "rgba(73, 187, 189, 1)", fontWeight: "bold" }}>
@@ -19,9 +18,7 @@ export default function WhatIsTotcSection() {
           provide students with feedback all in one place.
         </p>
 
-        {/* Cards */}
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-          {/* Instructor Card */}
           <div className="relative rounded-2xl overflow-hidden shadow-md w-80">
             <img
               src={instructorImg}
@@ -38,7 +35,6 @@ export default function WhatIsTotcSection() {
             </div>
           </div>
 
-          {/* Student Card */}
           <div className="relative rounded-2xl overflow-hidden shadow-md w-80">
             <img
               src={studentImg}

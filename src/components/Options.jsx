@@ -5,9 +5,7 @@ export default function Options() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 space-y-20">
-        {/* Class Management - Image on right */}
         <div className="flex flex-col md:flex-row items-center gap-10">
-          {/* Text */}
           <div className="flex-1">
             <h2 className="text-3xl font-bold mb-3">
               <span style={{ color: "rgba(73, 187, 189, 1)" }}>
@@ -23,7 +21,6 @@ export default function Options() {
               can review and grade tests and quizzes in real-time.
             </p>
           </div>
-          {/* Image */}
           <div className="flex-1 flex justify-center">
             <img
               src={gradebookImage}
@@ -33,9 +30,7 @@ export default function Options() {
           </div>
         </div>
 
-        {/* One-on-One Discussions - Image on left */}
         <div className="flex flex-col md:flex-row items-center gap-10">
-          {/* Image */}
           <div className="flex-1 flex justify-center">
             <img
               src={discussionImage}
@@ -43,7 +38,6 @@ export default function Options() {
               className="w-[450px] h-auto"
             />
           </div>
-          {/* Text */}
           <div className="flex-1">
             <h2 className="text-3xl font-bold mb-3">
               <span style={{ color: "rgba(47, 50, 125, 1)" }}>
@@ -61,7 +55,6 @@ export default function Options() {
         </div>
       </div>
 
-      {/* See more button */}
       <div className="flex justify-center mt-16">
         <a
           href="/features"

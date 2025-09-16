@@ -5,7 +5,6 @@ import Footer from "../components/Footer.jsx";
 
 export default function Layout() {
   const location = useLocation();
-
   const isLandingPage = location.pathname === "/";
 
   return (

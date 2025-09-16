@@ -7,9 +7,7 @@ import StudentsAlsoBought from "../components/StudentsAlsoBought";
 export default function LearnPage() {
   return (
     <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar */}
       <aside className="w-80 bg-white border-r p-4 overflow-y-auto">
-        {/* Arrow Button */}
         <Link
           to="/courses"
           className="w-10 h-10 flex items-center justify-center rounded-md mb-4"
@@ -18,10 +16,8 @@ export default function LearnPage() {
           <ArrowLeft className="w-5 h-5 text-white" />
         </Link>
 
-        {/* Title */}
         <h3 className="text-base font-semibold mb-3">Change Simplification</h3>
 
-        {/* Lessons */}
         <div className="space-y-2">
           <Link
             to="/learn/lesson/1"
@@ -53,7 +49,6 @@ export default function LearnPage() {
           </Link>
         </div>
 
-        {/* Practice Quiz Section 1 */}
         <h3 className="text-base font-bold mt-6 mb-3">Practice Quiz</h3>
         <div className="space-y-2">
           {Array.from({ length: 13 }).map((_, i) => (
@@ -76,7 +71,6 @@ export default function LearnPage() {
           ))}
         </div>
 
-        {/* Practice Quiz Section 2 */}
         <h3 className="text-base font-bold mt-6 mb-3">Practice Quiz</h3>
         <div className="space-y-2">
           {Array.from({ length: 16 }).map((_, i) => (
@@ -99,9 +93,7 @@ export default function LearnPage() {
         </div>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1 bg-blue-50">
-        {/* Header Section */}
         <div
           className="px-8 py-6 text-white flex justify-between items-center"
           style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
@@ -114,7 +106,6 @@ export default function LearnPage() {
           </div>
         </div>
 
-        {/* Lesson Details Component */}
         <LessonDetail />
         <TestimonialCard />
         <StudentsAlsoBought />

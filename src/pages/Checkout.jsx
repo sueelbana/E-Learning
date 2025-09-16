@@ -1,32 +1,24 @@
 import React from "react";
-
-// ✅ Import images from assets
 import paypalIcon from "../assets/paypal.jpg";
 import amexIcon from "../assets/amex.jpg";
 import visaIcon from "../assets/visa.jpg";
 import mastercardIcon from "../assets/mastercard.jpg";
 import pdfImage from "../assets/te.jpg";
-
-// ✅ Import the EducationOffers component
 import EducationOffers from "../components/EducationOffers";
 
 const CheckoutPage = () => {
   return (
     <>
-      {/* Checkout Section */}
       <section className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-8">
-        {/* Left - Payment Form */}
         <div className="bg-white shadow-lg rounded-lg p-6 w-full md:w-2/3">
           <h2 className="text-xl font-bold mb-2">Checkout</h2>
 
-          {/* Cart Type */}
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">
               Cart Type
             </label>
           </div>
 
-          {/* Payment Options */}
           <div className="flex gap-4 mb-6">
             <img src={paypalIcon} alt="PayPal" className="h-10" />
             <img src={amexIcon} alt="American Express" className="h-10" />
@@ -34,7 +26,6 @@ const CheckoutPage = () => {
             <img src={mastercardIcon} alt="Mastercard" className="h-10" />
           </div>
 
-          {/* Card Form */}
           <form className="space-y-5">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -90,7 +81,6 @@ const CheckoutPage = () => {
           </form>
         </div>
 
-        {/* Right - Summary */}
         <div className="bg-sky-50 shadow-md rounded-lg p-6 w-full md:w-1/3 h-[360px]">
           <h3 className="text-lg mb-4">Summary</h3>
 
@@ -145,7 +135,6 @@ const CheckoutPage = () => {
         </div>
       </section>
 
-      {/* ✅ Import Offers Below Checkout */}
       <EducationOffers />
     </>
   );

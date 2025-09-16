@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { LayoutGrid, Clock } from "lucide-react"; // example icons
+import { LayoutGrid, Clock } from "lucide-react";
 import linaAvatar from "../assets/lina.jpg";
 import course1 from "../assets/s1.jpg";
 import course2 from "../assets/s2.jpg";
@@ -51,12 +51,10 @@ export default function StudentsAlsoBought() {
   return (
     <div className="bg-blue-50 py-10">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold text-gray-900">
             Students also bought
           </h2>
-          {/* Navigation Buttons */}
           <div className="flex justify-end gap-3 mt-10">
             <button className="w-7 h-7 flex items-center justify-center rounded-sm bg-white shadow hover:bg-gray-100 transition">
               ←
@@ -67,14 +65,12 @@ export default function StudentsAlsoBought() {
           </div>
         </div>
 
-        {/* Courses Row */}
         <div className="flex space-x-6 overflow-x-auto scrollbar-hide">
           {courses.map((course) => (
             <div
               key={course.id}
               className="bg-white rounded-xl shadow hover:shadow-lg transition w-72 flex-shrink-0"
             >
-              {/* Course Image */}
               <div className="flex items-center justify-center h-40">
                 <img
                   src={course.image}
@@ -83,32 +79,25 @@ export default function StudentsAlsoBought() {
                 />
               </div>
 
-              {/* Content */}
               <div className="p-4 space-y-2">
-                {/* Title */}
                 <h3 className="text-base font-semibold text-gray-800">
                   {course.title}
                 </h3>
 
-                {/* Description */}
                 <p className="text-sm text-gray-600">{course.description}</p>
 
-                {/* Category + Duration */}
                 <div className="flex justify-between text-xs text-gray-500">
-                  {/* Left: Category */}
                   <div className="flex items-center space-x-1">
                     <LayoutGrid size={14} className="text-gray-400" />
                     <span>{course.category}</span>
                   </div>
 
-                  {/* Right: Duration */}
                   <div className="flex items-center space-x-1">
                     <Clock size={14} className="text-gray-400" />
                     <span>{course.duration}</span>
                   </div>
                 </div>
 
-                {/* Instructor & Price */}
                 <div className="flex justify-between items-center mt-3">
                   <div className="flex items-center space-x-2">
                     <img

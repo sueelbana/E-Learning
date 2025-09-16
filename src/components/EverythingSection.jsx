@@ -5,7 +5,6 @@ export default function EverythingSection() {
   return (
     <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        {/* Left side */}
         <div>
           <h2 className="text-3xl md:text-3xl font-semibold text-gray-900 leading-snug">
             <span style={{ color: "rgba(47, 50, 125, 1)" }}>
@@ -30,16 +29,13 @@ export default function EverythingSection() {
           </a>
         </div>
 
-        {/* Right side (Image + Play Button) */}
         <div className="relative">
-          {/* Image */}
           <img
             src={Classroom}
             alt="Classroom"
             className="rounded-xl shadow-lg w-full"
           />
 
-          {/* Play Button Overlay */}
           <button className="absolute inset-0 flex items-center justify-center">
             <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg hover:scale-110 transition transform">
               <Play

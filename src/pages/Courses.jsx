@@ -43,9 +43,7 @@ const courses = [
 export default function Courses() {
   return (
     <div>
-      {/* Courses Section with full-width blue background */}
       <section className="bg-blue-50 py-6 px-6 w-full">
-        {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2
             className="text-xl font-bold"
@@ -58,12 +56,11 @@ export default function Courses() {
           </button>
         </div>
 
-        {/* Courses Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {courses.map((course) => (
             <Link
               key={course.id}
-              to={`/schedual/${course.id}`} // ✅ use Link instead of navigate
+              to={`/schedual/${course.id}`} 
               className="rounded-lg shadow-md bg-white overflow-hidden hover:shadow-lg transition block"
             >
               <div className="flex justify-center items-center">
@@ -77,7 +74,6 @@ export default function Courses() {
                 <h3 className="font-medium text-gray-800 mb-2">
                   {course.title}
                 </h3>
-                {/* Author */}
                 <div className="flex items-center text-sm text-gray-600 mb-3">
                   <img
                     src={profilePic}
@@ -86,7 +82,6 @@ export default function Courses() {
                   />
                   {course.author}
                 </div>
-                {/* Progress Bar */}
                 <div className="mb-2">
                   <div className="w-full bg-gray-200 h-1.5 rounded-full">
                     <div
@@ -103,7 +98,6 @@ export default function Courses() {
           ))}
         </div>
 
-        {/* Navigation Buttons */}
         <div className="flex justify-end gap-2 mt-6">
           <button className="w-8 h-8 flex items-center justify-center rounded-lg bg-[rgba(73,187,189,1)] shadow hover:opacity-90 transition">
             <ChevronLeft className="w-4 h-4 text-white" />
@@ -114,12 +108,10 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Categories Section */}
       <div className="mt-12">
         <CourseCategories />
       </div>
 
-      {/* Recommended Section with blue background */}
       <section className="bg-blue-50 py-6 px-6 w-full">
         <Recommended />
       </section>

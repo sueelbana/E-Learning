@@ -5,7 +5,6 @@ export default function TestimonialSection() {
   return (
     <section className="py-16 bg-white dark:bg-neutral-900 font-buenos">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
-        {/* Left Text */}
         <div>
           <p className="uppercase tracking-wider text-sm text-neutral-500 mb-2">
             Testimonial
@@ -30,7 +29,6 @@ export default function TestimonialSection() {
           </button>
         </div>
 
-        {/* Right Image + Card + Arrow */}
         <div className="relative flex justify-center">
           <img
             src={testImg}
@@ -38,7 +36,6 @@ export default function TestimonialSection() {
             className="rounded-2xl w-80 h-auto object-cover"
           />
 
-          {/* Floating Testimonial Card */}
           <div className="absolute -bottom-16 -right-6 bg-white shadow-lg rounded-xl p-4 w-80">
             <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-3 leading-snug">
               "Thank you so much for your help. It’s exactly what I’ve been
@@ -47,10 +44,8 @@ export default function TestimonialSection() {
             </p>
             <div>
               <div className="flex items-center justify-between">
-                {/* Name on the left */}
                 <p className="text-neutral-900">Gloria Rose</p>
 
-                {/* Stars + Reviews stacked on the right */}
                 <div className="flex flex-col items-end">
                   <div className="flex text-yellow-400 gap-0.5">
                     <Star size={12} fill="currentColor" />
@@ -60,7 +55,6 @@ export default function TestimonialSection() {
                     <Star size={12} fill="currentColor" />
                   </div>
 
-                  {/* Reviews text aligned right */}
                   <div className="text-right">
                     <span className="text-sm text-neutral-500">
                       12 Reviews at Yelp
@@ -71,7 +65,6 @@ export default function TestimonialSection() {
             </div>
           </div>
 
-          {/* Circle Right Arrow Button */}
           <button className="absolute top-1/2 right-4 transform -translate-y-3/4 bg-white text-sky-500 shadow-md rounded-full p-4 hover:bg-sky-500 hover:text-white transition">
             <ChevronRight size={20} />
           </button>

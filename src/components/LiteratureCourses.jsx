@@ -17,12 +17,10 @@ const books = [
 export default function LiteratureCourses() {
   return (
     <div className="w-full max-w-6xl mx-auto px-6 py-12 bg-white">
-      {/* Section Title */}
       <h2 className="text-lg font-semibold text-gray-800 mb-6">
         Literature course
       </h2>
 
-      {/* Books Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {books.map((book) => (
           <div
@@ -42,7 +40,6 @@ export default function LiteratureCourses() {
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="flex justify-center items-center mt-8 gap-2">
         <button className="px-3 py-1 border rounded-md text-gray-500 hover:bg-gray-100">
           &lt;

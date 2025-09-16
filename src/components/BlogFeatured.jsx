@@ -5,7 +5,6 @@ export default function BlogFeatured() {
   return (
     <section className="py-16 bg-blue-50">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        {/* Left - Text Content */}
         <div>
           <p className="text-sm text-black font-semibold">
             By Thamodrabins<span className="font-medium text-gray-900"></span>{" "}
@@ -29,7 +28,6 @@ export default function BlogFeatured() {
           </button>
         </div>
 
-        {/* Right - Image */}
         <div className="flex justify-center md:justify-end">
           <img
             src={BlogImg}
