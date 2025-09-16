@@ -25,7 +25,7 @@ export default function AboutUs() {
           <img
             src={ProfileImage}
             alt="Instructor"
-            className="w-32 h-32 rounded-full border-4 border-white"
+            className="w-48 h-48 rounded-full border-4 border-white object-cover"
           />
         </div>
 

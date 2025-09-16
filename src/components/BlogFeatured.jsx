@@ -3,11 +3,11 @@ import BlogImg from "../assets/blog.jpg";
 
 export default function BlogFeatured() {
   return (
-    <section className="py-16 bg-[#e2f1ff]">
+    <section className="py-16 bg-blue-50">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left - Text Content */}
         <div>
-          <p className="text-sm text-gray-700">
+          <p className="text-sm text-black font-semibold">
             By Thamodrabins<span className="font-medium text-gray-900"></span>{" "}
             in{" "}
             <span className="text-[rgba(73,187,189,1)] font-semibold">
@@ -15,12 +15,13 @@ export default function BlogFeatured() {
             </span>
           </p>
           <h2 className="mt-3 text-2xl md:text-3xl font-bold leading-snug text-[rgba(47,50,125,1)]">
-            Why Swift UI Should Be on the <br></br>Radar of Every Mobile<br></br>
+            Why Swift UI Should Be on the <br></br>Radar of Every Mobile
+            <br></br>
             Developer
           </h2>
-          <p className="mt-4 text-gray-800 text-sm md:text-base leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing
+          <p className="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br></br>sed do
+            eiusmod tempos Lorem ipsum dolor sitamet, <br></br>consectetur adipiscing
             elit, sed do eiusmod tempor
           </p>
           <button className="mt-6 px-6 py-2 bg-[rgba(73,187,189,1)] text-white text-sm font-medium rounded-md hover:opacity-90 transition">

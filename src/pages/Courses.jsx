@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom"; // ✅ use Link instead of navigate
+import { Link } from "react-router-dom";
 
 import course1 from "../assets/c1.jpg";
 import course2 from "../assets/c2.jpg";
@@ -42,82 +42,95 @@ const courses = [
 
 export default function Courses() {
   return (
-    <div className="p-6 bg-[#e9f6ff] min-h-screen">
-      {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h2
-          className="text-xl font-bold"
-          style={{ color: "rgba(37, 38, 65, 1)" }}
-        >
-          Welcome back, ready for your next lesson?
-        </h2>
-        <button className="text-sm font-bold hover:underline text-[rgba(73,187,189,1)]">
-          View History
-        </button>
-      </div>
-
-      {/* Courses Grid */}
-      <div className="grid md:grid-cols-3 gap-6">
-        {courses.map((course) => (
-          <Link
-            key={course.id}
-            to={`/schedual/${course.id}`} // ✅ use Link instead of navigate
-            className="rounded-lg shadow-md bg-white overflow-hidden hover:shadow-lg transition block"
+    <div>
+      {/* Courses Section with full-width blue background */}
+      <section className="bg-blue-50 py-6 px-6 w-full">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-6">
+          <h2
+            className="text-xl font-bold"
+            style={{ color: "rgba(37, 38, 65, 1)" }}
           >
-            <div className="flex justify-center items-center">
-              <img
-                src={course.image}
-                alt={course.title}
-                className="w-42 h-40 object-cover mt-4"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="font-medium text-gray-800 mb-2">{course.title}</h3>
-              {/* Author */}
-              <div className="flex items-center text-sm text-gray-600 mb-3">
-                <img
-                  src={profilePic}
-                  alt={course.author}
-                  className="w-6 h-6 rounded-full mr-2"
-                />
-                {course.author}
-              </div>
-              {/* Progress Bar */}
-              <div className="mb-2">
-                <div className="w-full bg-gray-200 h-1.5 rounded-full">
-                  <div
-                    className="bg-teal-500 h-1.5 rounded-full"
-                    style={{ width: `${course.progressValue}%` }}
-                  ></div>
-                </div>
-                <p className="text-xs text-gray-500 text-right mt-1">
-                  {course.progress}
-                </p>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+            Welcome back, ready for your next lesson?
+          </h2>
+          <button className="text-sm font-bold hover:underline text-[rgba(73,187,189,1)]">
+            View History
+          </button>
+        </div>
 
-      {/* Navigation Buttons */}
-      <div className="flex justify-end gap-2 mt-6">
-        <button className="w-8 h-8 flex items-center justify-center rounded-lg bg-[rgba(73,187,189,1)] shadow hover:opacity-90 transition">
-          <ChevronLeft className="w-4 h-4 text-white" />
-        </button>
-        <button className="w-8 h-8 flex items-center justify-center rounded-lg bg-[rgba(73,187,189,1)] shadow hover:opacity-90 transition">
-          <ChevronRight className="w-4 h-4 text-white" />
-        </button>
-      </div>
+        {/* Courses Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {courses.map((course) => (
+            <Link
+              key={course.id}
+              to={`/schedual/${course.id}`} // ✅ use Link instead of navigate
+              className="rounded-lg shadow-md bg-white overflow-hidden hover:shadow-lg transition block"
+            >
+              <div className="flex justify-center items-center">
+                <img
+                  src={course.image}
+                  alt={course.title}
+                  className="w-42 h-40 object-cover mt-4"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-medium text-gray-800 mb-2">
+                  {course.title}
+                </h3>
+                {/* Author */}
+                <div className="flex items-center text-sm text-gray-600 mb-3">
+                  <img
+                    src={profilePic}
+                    alt={course.author}
+                    className="w-6 h-6 rounded-full mr-2"
+                  />
+                  {course.author}
+                </div>
+                {/* Progress Bar */}
+                <div className="mb-2">
+                  <div className="w-full bg-gray-200 h-1.5 rounded-full">
+                    <div
+                      className="bg-teal-500 h-1.5 rounded-full"
+                      style={{ width: `${course.progressValue}%` }}
+                    ></div>
+                  </div>
+                  <p className="text-xs text-gray-500 text-right mt-1">
+                    {course.progress}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-end gap-2 mt-6">
+          <button className="w-8 h-8 flex items-center justify-center rounded-lg bg-[rgba(73,187,189,1)] shadow hover:opacity-90 transition">
+            <ChevronLeft className="w-4 h-4 text-white" />
+          </button>
+          <button className="w-8 h-8 flex items-center justify-center rounded-lg bg-[rgba(73,187,189,1)] shadow hover:opacity-90 transition">
+            <ChevronRight className="w-4 h-4 text-white" />
+          </button>
+        </div>
+      </section>
 
       {/* Categories Section */}
       <div className="mt-12">
         <CourseCategories />
-        <Recommended />
-        <Choiceofcourse />
-        <CoachingCTA />
-        <PersonalDevelopment />
-        <StudentsViewing />
       </div>
+
+      {/* Recommended Section with blue background */}
+      <section className="bg-blue-50 py-6 px-6 w-full">
+        <Recommended />
+      </section>
+
+      <Choiceofcourse />
+      <CoachingCTA />
+      <PersonalDevelopment />
+
+      <section className="bg-blue-50 py-6 px-6 w-full">
+        <StudentsViewing />
+      </section>
     </div>
   );
 }

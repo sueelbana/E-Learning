@@ -8,7 +8,9 @@ export default function WhatIsTotcSection() {
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl">
           <span style={{ color: "rgba(47, 50, 125, 1)" }}>What is </span>
-          <span style={{ color: "rgba(73, 187, 189, 1)" }}>TOTC?</span>
+          <span style={{ color: "rgba(73, 187, 189, 1)", fontWeight: "bold" }}>
+            TOTC?
+          </span>
         </h2>
         <p className="mt-3 text-neutral-600 max-w-3xl mx-auto">
           TOTC is a platform that allows educators to create online classes
@@ -45,7 +47,7 @@ export default function WhatIsTotcSection() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white text-center">
               <h3 className="text-lg md:text-xl font-semibold">FOR STUDENTS</h3>
-              <button className="mt-3 px-5 py-2 border border-white rounded-full text-sm font-medium bg-sky-500 border-sky-500 hover:bg-sky-600 transition">
+              <button className="mt-3 px-5 py-2 border rounded-full text-sm font-medium bg-sky-500 border-sky-500 hover:bg-sky-600 transition">
                 Enter access code
               </button>
             </div>

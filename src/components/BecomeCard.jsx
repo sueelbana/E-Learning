@@ -25,7 +25,8 @@ const BecomeCard = ({
       <div className="px-6 py-4 flex justify-end">
         <button
           onClick={buttonAction}
-          className="text-white bg-teal-500 hover:bg-teal-700 px-3 py-1 text-sm rounded-lg"
+          className="text-white px-3 py-1 text-sm rounded-lg transition"
+          style={{ backgroundColor: "rgba(73, 187, 189, 1)" }}
         >
           {buttonText}
         </button>

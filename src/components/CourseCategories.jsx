@@ -23,11 +23,13 @@ const categories = [
 export default function CourseCategories() {
   return (
     <section className="py-12">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="px-4 max-w-6xl mx-auto">
+        {/* Section Title */}
         <h2 className="text-xl font-semibold text-center mb-10">
           Choice favourite course from top category
         </h2>
 
+        {/* Categories Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {categories.map((cat, index) => (
             <Link
@@ -36,10 +38,15 @@ export default function CourseCategories() {
               state={{ category: cat }} // pass category data
               className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg transition"
             >
+              {/* Icon */}
               <div className="w-16 h-16 flex items-center justify-center rounded-xl mb-4">
                 <img src={cat.icon} alt={cat.title} className="w-12 h-12" />
               </div>
+
+              {/* Title */}
               <h3 className="text-lg font-bold mb-2">{cat.title}</h3>
+
+              {/* Description */}
               <p className="text-gray-500 text-sm">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod
